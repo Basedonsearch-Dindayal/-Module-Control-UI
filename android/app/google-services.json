@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "180915839120",
+    "project_id": "module-control-f273c",
+    "storage_bucket": "module-control-f273c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180915839120:android:65c9718760c266b7963815",
+        "android_client_info": {
+          "package_name": "com.modulecontrolui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNvrY2Q1nMKZDMWmSEvU82mXRNsWd9Z1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
