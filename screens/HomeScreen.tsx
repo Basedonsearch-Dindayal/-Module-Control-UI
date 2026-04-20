@@ -1,7 +1,8 @@
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
-export default function HomeScreen({ route }: any) {
-  console.log('ROUTE:', route?.params);
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+export default function HomeScreen({ route, navigation }: any) {
   const user = route?.params?.user;
 
   if (!user) {
@@ -12,11 +13,20 @@ export default function HomeScreen({ route }: any) {
     );
   }
 
+  const handleLogout = async () => {
+  await GoogleSignin.signOut();
+  navigation.replace('Login');
+};
+
   return (
     <View style={styles.container}>
       <Image source={{ uri: user.photo }} style={styles.image} />
       <Text style={styles.name}>{user.name}</Text>
       <Text style={styles.email}>{user.email}</Text>
+
+      <TouchableOpacity onPress={handleLogout}>
+        <Text>Switch Account</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -40,5 +50,11 @@ const styles = StyleSheet.create({
   email: {
     fontSize: 16,
     color: '#666',
+  },
+  logoutBtn: {
+    marginTop: 20,
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 8,
   },
 });
