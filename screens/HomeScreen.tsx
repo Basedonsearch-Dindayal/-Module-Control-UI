@@ -19,22 +19,27 @@ export default function HomeScreen({ route, navigation }: any) {
 };
 
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: user.photo }} style={styles.image} />
-      <Text style={styles.name}>{user.name}</Text>
-      <Text style={styles.email}>{user.email}</Text>
+    <>
+      <View style={styles.container}>
+        <Image source={{ uri: user.photo }} style={styles.image} />
+        <Text style={styles.name}>{user.name}</Text>
+        <Text style={styles.email}>{user.email}</Text>
 
-      <TouchableOpacity onPress={handleLogout}>
-        <Text>Switch Account</Text>
-      </TouchableOpacity>
-    </View>
+        <TouchableOpacity onPress={handleLogout}>
+          <Text>Switch Account</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
+        <Text style={styles.name}>Device Nearby:</Text>
+        <Text style={styles.email}>Sample 123</Text>
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
