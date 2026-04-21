@@ -16,6 +16,7 @@ export default function HomeScreen({ route, navigation }: any) {
   const handleLogout = async () => {
   await GoogleSignin.signOut();
   navigation.replace('Login');
+  console.log("USER LOGOUT AND BACK TO ONBOARDIG SCREEN");
 };
 
   return (
@@ -25,8 +26,8 @@ export default function HomeScreen({ route, navigation }: any) {
         <Text style={styles.name}>{user.name}</Text>
         <Text style={styles.email}>{user.email}</Text>
 
-        <TouchableOpacity onPress={handleLogout}>
-          <Text>Switch Account</Text>
+        <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
+          <Text style={styles.logoutText}>Logout</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.container}>
@@ -58,8 +59,12 @@ const styles = StyleSheet.create({
   },
   logoutBtn: {
     marginTop: 20,
-    backgroundColor: 'red',
+    backgroundColor: 'green',
     padding: 10,
     borderRadius: 8,
   },
+  logoutText:{
+    color: "white",
+    fontWeight:600
+  }
 });
