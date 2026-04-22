@@ -2,8 +2,8 @@ import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-// import BleScanner from '../components/BleScanner';
-import BleScanner from '../components/BleScannerLogOnly';
+import BleScanner from '../components/BleScanner';
+// import BleScanner from '../components/BleScannerLogOnly';
 
 export default function HomeScreen({ route, navigation }: any) {
   const user = route?.params?.user;
@@ -75,22 +75,22 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   backgroundBlobTop: {
-    // position: 'absolute',
-    // width: 220,
-    // height: 220,
-    // borderRadius: 110,
-    // backgroundColor: '#D9EED9',
-    // top: -80,
-    // right: -70,
+    position: 'absolute',
+    width: 220,
+    height: 220,
+    borderRadius: 110,
+    backgroundColor: '#D9EED9',
+    top: -80,
+    right: -70,
   },
   backgroundBlobBottom: {
-    // position: 'absolute',
-    // width: 260,
-    // height: 260,
-    // borderRadius: 130,
-    // backgroundColor: '#E6DFF7',
-    // bottom: -120,
-    // left: -100,
+    position: 'absolute',
+    width: 260,
+    height: 260,
+    borderRadius: 130,
+    backgroundColor: '#E6DFF7',
+    bottom: -120,
+    left: -100,
   },
   pageTitle: {
     fontSize: 30,
