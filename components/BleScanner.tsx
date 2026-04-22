@@ -9,7 +9,7 @@ const getRangeFromRssi = (rssi?: number) => {
   if (typeof rssi !== 'number') return 'unknown';
   if (rssi >= -60) return 'near';
   if (rssi >= -75) return 'medium';
-  return 'far';
+  return 'far'; 
 };
 
 type DiscoveredDevice = {
